@@ -6,7 +6,7 @@ function PLACE(X, Y, O) {
   LOCATIONX = X;
   LOCATIONY = Y;
   ORIENTATION = 0;
-}
+};
 
 //This function will move the the robot forward in whatever the direction (ORIENTAION) it is faceing.
 function MOVE() {
@@ -25,7 +25,7 @@ function MOVE() {
   else if (ORIENTAION === "WEST") {
     LOCATIONX--;
   }
-}
+};
 
 //This function will rotate the robot 90 degrees to the left of what ever directino is it facing
 function LEFT() {
@@ -41,7 +41,30 @@ function LEFT() {
     ORIENTAION === "EAST";
   }
 
-  else if (ORIENTAION === "EAST") [
+  else if (ORIENTAION === "EAST") {
     ORIENTAION === "NORTH";
-  ]
+  }
+};
+
+  //This function will rotate the robot 90 degrees to the right of what ever directino is it facing
+function RIGHT() {
+  if (ORIENTATION === "NORTH") {
+    ORIENTAION = "EAST";
+  }
+
+  else if (ORIENTAION === "EAST") {
+    ORIENTAION = "SOUTH";
+  }
+
+  else if (ORIENTAION === "SOUTH") {
+    ORIENTAION = "WEST";
+  }
+
+  else if (ORIENTAION === "WEST") {
+    ORIENTAION = "NORTH";
+  }
+};
+
+function REPORT() {
+  console.log(`${LOCATIONX}, ${LOCATIONY}, ${ORIENTAION}`)
 }
